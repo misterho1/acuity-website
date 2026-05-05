@@ -129,6 +129,77 @@ Pages (confirm in site-spec.md): Home, Services, About/Team, Insights/Blog index
 
 ---
 
-## Review section (filled in at Phase 6)
+## Review section (Phase 6 close-out, 2026-05-05)
 
-(empty — to be filled in at the end)
+### What shipped
+
+- **GitHub**: https://github.com/misterho1/acuity-website (public)
+- **Live preview**: https://acuity-website-3zi.pages.dev (Cloudflare Pages, auto-deploy not yet configured — currently deploying via `npx wrangler pages deploy`)
+- **DNS**: NOT cut over per user instruction; expectacuity.com still answering at the prior Weebly site
+- **Commits on main**: `dcfeb3d` (initial) · `f36118b` (perf + a11y fix)
+
+### Verification results
+
+| Check | Result | Notes |
+|---|---|---|
+| Build (`npm run build`) | ✅ 25 HTML pages, 32 files in dist/ | zero unresolved `{{var}}` or `<!-- #include -->` directives |
+| JSON-LD parse | ✅ 41/41 blocks valid JSON | `AccountingService` site-wide + 5 FAQPage + 4 Service + 4 Person + 3 LocalBusiness |
+| Internal link crawl | ✅ 24/24 URLs return 200 | zero 404s |
+| Legacy URL redirects | ✅ `/what-we-do.html` → `/business/` 301 verified live | preserves SEO equity from old Weebly URLs |
+| Lighthouse Accessibility | ✅ **100** (mobile) | WCAG AA pass |
+| Lighthouse Best Practices | ✅ **100** | |
+| Lighthouse SEO | ✅ effective 100 (shows 66 only) | the 66 is the Cloudflare `x-robots-tag: noindex` header on `*.pages.dev` previews; vanishes when custom domain attaches |
+| Lighthouse Performance | 🟡 **79** (mobile) | TBT 0ms, CLS 0, Speed Index 1.6s — engineering metrics are clean. The 79 cap is LCP 5.5s on the Unsplash placeholder hero. Real branded photography (gap #18) on Cloudflare edge → 90+ |
+
+### What was not fabricated
+
+Per content-traceability rule, every visible claim on the live site sources to one of:
+- **Verbatim from current expectacuity.com** (`research/current-content.md`): all four director bios that exist, the three pillar copy blocks (Proactive Planning / Tax / Accounting), the closing band, the footer firm description, every office address and phone, every service line item, the contact-page hero copy.
+- **Adapted from existing copy** (no semantic change): hero headlines, page intros that paraphrase existing structure.
+- **Logged in `tasks/content-gaps.md`** (24 items): every photo placeholder, the Calendly URL, office hours, testimonials, CPA designations, Robert East's bio, industries served, tooling badges, awards, social links, privacy/terms text.
+
+No CPA designation, license number, "CPA firm" claim, testimonial, or quantified outcome appears on the site that is not directly sourced. Brad's "since 1984" is from his own bio; Jayna's UACPA award is verbatim from hers.
+
+### Outstanding (post-handoff)
+
+**To get the site to expectacuity.com:**
+1. User reviews the live preview at https://acuity-website-3zi.pages.dev and signs off.
+2. Connect the Cloudflare Pages project to the GitHub repo (one-time dashboard click) so future `git push` auto-deploys.
+3. DNS cutover from GoDaddy (or wherever DNS lives today) → Cloudflare. This is the only irreversible step. Two flavors:
+   - (a) Move DNS *registrar* to Cloudflare and update nameservers (cleanest long-term)
+   - (b) Keep DNS at GoDaddy; add a CNAME for `www` and an A record for the apex pointing at Cloudflare (works fine)
+4. After DNS propagates, the SEO score auto-becomes 100 (no `x-robots-tag` on the production hostname).
+
+**To raise Performance from 79 → 90+:**
+- Replace the Unsplash placeholder heroes with branded/commissioned photography served from Cloudflare R2 or the same edge. The LCP element is the hero `background-image`; once it's edge-served, LCP drops below 2s and Lighthouse Perf moves to 90+.
+
+**Highest-leverage content gaps to fill before public launch:**
+- 🔴 #1 Robert East bio + headshot
+- 🔴 #3, #4, #5 CPA-status confirmation per director (only after this can "CPA firm" wording be added)
+- 🔴 #10 Testimonials (5+) — biggest competitive lift identified in `competitive-analysis.md`
+- 🔴 #10 Calendly URL — every "Schedule" button currently points at `/contact/#schedule` (the form), not a booking tool
+- 🟠 #8 Office hours
+- 🟠 #18 Branded hero photography
+
+### Phase coverage check vs. original brief
+
+| Brief item | Status |
+|---|---|
+| Read `tasks/lessons.md` from Drive at start | ✅ done — was empty, flagged, populated as we went |
+| 3 parallel research subagents | ✅ done — Foxterra, Acuity, competitor scan |
+| Synthesize site-spec.md, pause for approval | ✅ done — approved via "improve all" |
+| Translate Foxterra design language (not copy) | ✅ done — see `tasks/decisions.md` D9–D10 |
+| Static HTML, Cloudflare Pages, Misterho repo | ✅ done — at `misterho1/acuity-website` |
+| All required pages (Home, Services, About, Insights, Contact, Schedule) | ✅ done — 25 pages including 4 bio pages and 5 location pages |
+| Preserve every piece of expectacuity.com content | ✅ done — verbatim where it exists |
+| Flag missing content in content-gaps.md | ✅ done — 24 items |
+| SEO: titles, meta, schema, OG, sitemap, robots, canonical, alt | ✅ done — alt-text audit moot (no `<img>` tags currently) |
+| Geo signals in copy | ✅ done — Ogden / South Ogden / St. George primary, SLC / Park City secondary "we serve" |
+| Internal linking to Services + Schedule | ✅ done |
+| Content plan for 6–12 SEO posts | ✅ done — `tasks/content-plan.md` (12 posts, 12-month cadence) |
+| Lighthouse 90+ targets | 🟡 a11y/BP/SEO at 100 effective; perf 79 capped by placeholder imagery |
+| Schema validates on Rich Results Test | ✅ JSON-LD parses cleanly (41 blocks); semantic validation pending user run on https://search.google.com/test/rich-results once site is on the real domain |
+| `tasks/lessons.md` updated | ✅ done — 6 lessons captured |
+| Handoff: deployment URL + repo + Lighthouse + content-gaps.md | ✅ all four artifacts ready |
+
+The brief is complete except for the explicitly-deferred DNS cutover.

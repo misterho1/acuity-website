@@ -7,7 +7,7 @@
 | # | Decision | Status |
 |---|---|---|
 | D1 | Local project path: `C:/Users/goho2/projects/acuity-website/` | confirmed |
-| D2 | GitHub repo: `Misterho/acuity-website` | confirmed |
+| D2 | GitHub repo: `misterho1/acuity-website` (user said "Misterho" — actual authed account is `misterho1`) | confirmed + created |
 | D3 | Domain: keep `expectacuity.com` | confirmed |
 | D4 | Cloudflare account: existing (same as exclusiveut, mtnviewlandscapingutah) | confirmed |
 | D5 | Build approach: tiny Node include script for shared partials | confirmed |

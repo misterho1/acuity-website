@@ -3,7 +3,7 @@
    Consumes tokens.css. Vanilla CSS, no framework.
    ============================================================ */
 
-@import url("./tokens.css");
+/* tokens.css is loaded separately in head.html (parallel-load, no @import chain) */
 
 /* ---------- RESET ---------- */
 *, *::before, *::after { box-sizing: border-box; }
@@ -352,6 +352,7 @@ p.small { font-size: var(--fs-small); color: var(--color-mute); }
 .site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4 { color: var(--color-paper-on-ink); }
 .site-footer a { color: var(--color-paper-on-ink); }
 .site-footer a:hover { color: var(--color-rule); }
+.site-footer .small { color: var(--color-rule); }
 .site-footer .small.muted { color: var(--color-rule); }
 .site-footer .rule { border-top-color: rgba(216, 220, 226, 0.15); margin-block: var(--space-5); }
 .footer-list { list-style: none; margin: 0; padding: 0; }

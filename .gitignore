@@ -1,0 +1,25 @@
+# Build output (Cloudflare Pages rebuilds from source)
+dist/
+
+# Dependencies (none currently — kept for safety)
+node_modules/
+package-lock.json
+
+# Editor + OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Local environment
+.env
+.env.local
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Worktree / agent scratch
+.claude/

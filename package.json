@@ -1,0 +1,10 @@
+{
+  "name": "acuity-website",
+  "version": "1.0.0",
+  "description": "Acuity Business & Tax Advisors — static site",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node -e \"require('http').createServer((q,s)=>{const f=require('fs'),p=require('path');let u=q.url.split('?')[0];if(u.endsWith('/'))u+='index.html';const fp=p.join('dist',u);f.readFile(fp,(e,d)=>{if(e){s.writeHead(404);s.end();return}const t={'.html':'text/html','.css':'text/css','.js':'application/javascript','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.xml':'application/xml','.txt':'text/plain'};s.writeHead(200,{'Content-Type':t[p.extname(fp)]||'text/plain'});s.end(d)})}).listen(8787,()=>console.log('http://localhost:8787'))\""
+  }
+}

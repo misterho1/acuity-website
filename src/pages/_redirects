@@ -1,0 +1,11 @@
+# Legacy Weebly URLs → new structure (preserves SEO equity).
+# Cloudflare Pages reads this. 301 = permanent.
+# Docs: https://developers.cloudflare.com/pages/configuration/redirects/
+
+/what-we-do.html         /business/             301
+/about-us.html           /about/                301
+/contact.html            /contact/              301
+/client-login.html       /client-login/         301
+/client-login1.html      /client-login/         301
+/make-a-payment.html     /make-a-payment/       301
+/check-my-refund.html    /check-my-refund/      301

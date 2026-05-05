@@ -1,0 +1,38 @@
+<!--meta
+title: Client Login | Acuity Business & Tax Advisors
+description: Secure client login for existing Acuity clients to access tax documents, bookkeeping records, and the secure file portal.
+canonical: https://expectacuity.com/client-login/
+-->
+<!-- #include "head" -->
+<!-- #include "header" -->
+
+<main id="main">
+
+  <section class="section">
+    <div class="container container--narrow">
+      <span class="eyebrow">Client login</span>
+      <h1>Log in to your Acuity account.</h1>
+      <p class="lead">Existing clients can sign in below to access tax documents, bookkeeping records, and the secure file portal.</p>
+
+      <form class="form" style="margin-top: var(--space-6);" onsubmit="event.preventDefault(); document.getElementById('login-status').textContent='Login destination is being wired — call your advisor or the office for now.';">
+        <div class="field">
+          <label for="login">Login</label>
+          <input id="login" name="login" type="text" autocomplete="username">
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password">
+        </div>
+        <div class="cluster" style="justify-content: space-between;">
+          <button type="submit" class="btn btn--filled">Sign in</button>
+          <a href="/contact/">Forgot password?</a>
+        </div>
+        <p class="form__status small muted" id="login-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="small muted" style="margin-top: var(--space-5);">Not a client yet? <a href="/contact/#schedule">Schedule a Strategy Session</a> to get started.</p>
+    </div>
+  </section>
+</main>
+
+<!-- #include "footer" -->

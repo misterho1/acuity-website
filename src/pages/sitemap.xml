@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url><loc>https://expectacuity.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+
+  <url><loc>https://expectacuity.com/business/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://expectacuity.com/business/tax-business-advisory/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://expectacuity.com/business/tax-accounting-maintenance/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <url><loc>https://expectacuity.com/personal/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://expectacuity.com/personal/tax-preparation/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://expectacuity.com/personal/multi-year-projections/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://expectacuity.com/about/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://expectacuity.com/about/justin-matthews/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://expectacuity.com/about/robert-east/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://expectacuity.com/about/jayna-forsgren/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://expectacuity.com/about/brad-folsom/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://expectacuity.com/insights/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://expectacuity.com/contact/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <url><loc>https://expectacuity.com/locations/ogden/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://expectacuity.com/locations/south-ogden/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://expectacuity.com/locations/st-george/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://expectacuity.com/locations/salt-lake-city/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://expectacuity.com/locations/park-city/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <url><loc>https://expectacuity.com/client-login/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://expectacuity.com/make-a-payment/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://expectacuity.com/check-my-refund/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <url><loc>https://expectacuity.com/privacy/</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://expectacuity.com/terms/</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+
+</urlset>

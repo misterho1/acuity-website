@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acuity — Style Preview (Phase 2 Vibe Check)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="../src/styles/site.css" />
+  <style>
+    /* page-only helpers for the preview page itself */
+    .swatch { border: var(--border); padding: var(--space-3); display: flex; gap: var(--space-3); align-items: center; }
+    .swatch__chip { width: 56px; height: 56px; border: var(--border); }
+    .swatch__meta { display: flex; flex-direction: column; gap: 2px; }
+    .swatch__name { font-weight: 600; font-size: var(--fs-small); }
+    .swatch__hex  { font-family: var(--font-mono); font-size: var(--fs-small); color: var(--color-mute); }
+    .scale-row { display: flex; align-items: baseline; gap: var(--space-4); padding-block: var(--space-2); border-bottom: var(--border); }
+    .scale-row__meta { font-family: var(--font-mono); font-size: 12px; color: var(--color-mute); white-space: nowrap; min-width: 220px; }
+    .preview-label { font-family: var(--font-mono); font-size: 11px; color: var(--color-mute); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: var(--space-2); }
+  </style>
+</head>
+<body>
+
+<!-- ============== HERO ============== -->
+<section class="hero">
+  <div class="hero__media" style="background-image: url('https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=1800&q=80&auto=format&fit=crop');"></div>
+  <div class="hero__overlay"></div>
+  <div class="container">
+    <div class="hero__content">
+      <span class="eyebrow">Acuity Business &amp; Tax Advisors</span>
+      <h1>Tax and accounting for smart business owners.</h1>
+      <p class="lead">Proactive planning for entrepreneurs across Ogden, South Ogden, St.&nbsp;George, and the rest of Utah.</p>
+      <div class="cluster">
+        <a href="#" class="btn btn--reverse">Schedule a Strategy Session</a>
+        <a href="#" class="btn btn--reverse" style="border-color: transparent;">See what we do →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== THREE PILLARS (verbatim copy from current site) ============== -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">What we do</span>
+    <h2 style="max-width: 16ch;">Proactive planning, all year long.</h2>
+    <p class="lead">A good accountant should never cost you money out of pocket. Our proven tax strategies save you taxes year after year.</p>
+
+    <div class="grid grid--3" style="margin-top: var(--space-6);">
+      <article class="card">
+        <span class="eyebrow">01 · Plan</span>
+        <h3>Proactive Planning</h3>
+        <p>We begin all of our engagements by identifying your needs and goals. Each business is as unique as its owner. As your business, your life, and the tax code all change, we watch out for you and adapt your plan.</p>
+        <a href="#" class="btn btn--accent" style="margin-top: var(--space-3);">Learn more</a>
+      </article>
+      <article class="card">
+        <span class="eyebrow">02 · Tax</span>
+        <h3>Tax Strategy</h3>
+        <p>The tax code impacts your business all year. As tax advisors, we help you identify opportunities to save money. We view the filing of the return as a simple formality at the end of the year because we have been working on it for the last 12 months.</p>
+        <a href="#" class="btn btn--accent" style="margin-top: var(--space-3);">Learn more</a>
+      </article>
+      <article class="card">
+        <span class="eyebrow">03 · Accounting</span>
+        <h3>Accounting</h3>
+        <p>Accounting is the language of business, and we view ourselves as interpreters. With our focus on technology, we keep you up to date with live data and financial dashboards. With good numbers and good advisors, you have the confidence to achieve your goals.</p>
+        <a href="#" class="btn btn--accent" style="margin-top: var(--space-3);">Learn more</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TYPE SCALE ============== -->
+<section class="section section--alt">
+  <div class="container">
+    <span class="eyebrow">Type system</span>
+    <h2>Fraunces · Inter</h2>
+    <p class="lead">Display serif at weight 400 (Foxterra rule preserved — the serif does the work). Inter handles uppercase eyebrows + body. One free Google-Fonts pair, finance-friendly numerals.</p>
+
+    <div style="margin-top: var(--space-6);">
+      <div class="scale-row">
+        <span class="scale-row__meta">H1 · Fraunces 60/66 · 400</span>
+        <h1 style="margin: 0;">Tax planning that pays.</h1>
+      </div>
+      <div class="scale-row">
+        <span class="scale-row__meta">H2 · Fraunces 40/46 · 400</span>
+        <h2 style="margin: 0;">A 40-year Utah firm.</h2>
+      </div>
+      <div class="scale-row">
+        <span class="scale-row__meta">H3 · Fraunces 28/34 · 400</span>
+        <h3 style="margin: 0;">Entity Structure Planning</h3>
+      </div>
+      <div class="scale-row">
+        <span class="scale-row__meta">Eyebrow · Inter 14 · 600 · UPPER · 0.08em</span>
+        <span class="eyebrow" style="margin: 0;">What we do</span>
+      </div>
+      <div class="scale-row">
+        <span class="scale-row__meta">Body lead · Inter 20/28 · 400</span>
+        <p class="lead" style="margin: 0;">Empowering you to make smarter business decisions today.</p>
+      </div>
+      <div class="scale-row">
+        <span class="scale-row__meta">Body · Inter 16/25 · 400</span>
+        <p style="margin: 0;">Acuity Business &amp; Tax Advisors is a full-service accounting firm with offices in Ogden, South Ogden, and St.&nbsp;George, Utah.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== COLOR ============== -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Palette</span>
+    <h2>Single accent · cool neutrals.</h2>
+    <p class="lead">One chromatic colour (deep navy) on a near-white paper, slate ink, and one mute. Restraint translated from Foxterra's brass-on-warm-paper to advisory-appropriate cool tones.</p>
+
+    <div class="grid grid--4" style="margin-top: var(--space-6);">
+      <div class="swatch"><div class="swatch__chip" style="background: var(--color-paper);"></div><div class="swatch__meta"><span class="swatch__name">Paper</span><span class="swatch__hex">#F7F8FA</span></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background: var(--color-paper-edge);"></div><div class="swatch__meta"><span class="swatch__name">Paper edge</span><span class="swatch__hex">#EFF1F4</span></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background: var(--color-rule);"></div><div class="swatch__meta"><span class="swatch__name">Rule</span><span class="swatch__hex">#D8DCE2</span></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background: var(--color-mute);"></div><div class="swatch__meta"><span class="swatch__name">Mute</span><span class="swatch__hex">#5A6573</span></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background: var(--color-ink);"></div><div class="swatch__meta"><span class="swatch__name">Ink</span><span class="swatch__hex">#1F2A37</span></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background: var(--color-accent);"></div><div class="swatch__meta"><span class="swatch__name">Accent</span><span class="swatch__hex">#0E3A5F</span></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background: var(--color-accent-hover);"></div><div class="swatch__meta"><span class="swatch__name">Accent hover</span><span class="swatch__hex">#0A2B47</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== BUTTONS ============== -->
+<section class="section section--alt">
+  <div class="container">
+    <span class="eyebrow">Components</span>
+    <h2>Buttons.</h2>
+    <p class="lead">Sharp 0px corners, 1px borders, ghost-default. The same component flips light/dark by inheriting context — Foxterra rule preserved.</p>
+
+    <div style="margin-top: var(--space-5);">
+      <span class="preview-label">Default (ghost on paper)</span>
+      <div class="cluster" style="margin-bottom: var(--space-5);">
+        <a href="#" class="btn">Schedule a session</a>
+        <a href="#" class="btn btn--accent">Schedule a session</a>
+        <a href="#" class="btn btn--filled">Schedule a session</a>
+      </div>
+
+      <span class="preview-label">Reverse (on ink)</span>
+      <div class="cluster" style="background: var(--color-ink); padding: var(--space-5); margin-bottom: 0;">
+        <a href="#" class="btn btn--reverse">Schedule a session</a>
+        <a href="#" class="btn btn--reverse" style="background: var(--color-accent); border-color: var(--color-accent);">Schedule a session</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TEAM CARD (Dark Horse pattern) ============== -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Team card pattern</span>
+    <h2>Directors.</h2>
+    <p class="lead">Dark Horse-style depth: photo, specialties, education, direct contact. Currently three of four directors have published bios; Robert East is flagged in <code>content-gaps.md</code>.</p>
+
+    <div class="grid grid--3" style="margin-top: var(--space-6);">
+
+      <article class="card">
+        <div style="aspect-ratio: 4 / 5; background: linear-gradient(135deg, var(--color-rule), var(--color-mute)); margin-bottom: var(--space-4);"></div>
+        <span class="eyebrow">St. George, Utah</span>
+        <h3>Justin Matthews</h3>
+        <p class="muted small" style="margin-top: -8px;">Tax &amp; Business Advisor · Director, Client Services</p>
+        <p>Extensive background in tax and accounting; former lead consultant and presenter for Thomson Reuters, coaching tax professionals on proactive planning.</p>
+        <p class="small muted">B.S. Accounting, Dixie State University · M.Acc, Southern Utah University</p>
+        <a href="#" class="btn btn--accent" style="margin-top: var(--space-3);">Schedule with Justin</a>
+      </article>
+
+      <article class="card">
+        <div style="aspect-ratio: 4 / 5; background: linear-gradient(135deg, var(--color-rule), var(--color-mute)); margin-bottom: var(--space-4);"></div>
+        <span class="eyebrow">South Ogden, Utah</span>
+        <h3>Jayna Forsgren</h3>
+        <p class="muted small" style="margin-top: -8px;">Tax &amp; Business Advisor · Director, Client Services</p>
+        <p>Over 15 years in public accounting. 2019 UACPA Experience Leader: Women to Watch recipient. Active in Ogden-area community.</p>
+        <p class="small muted">B.S. Accounting, Weber State · Master of Professional Accountancy in Tax</p>
+        <a href="#" class="btn btn--accent" style="margin-top: var(--space-3);">Schedule with Jayna</a>
+      </article>
+
+      <article class="card">
+        <div style="aspect-ratio: 4 / 5; background: linear-gradient(135deg, var(--color-rule), var(--color-mute)); margin-bottom: var(--space-4);"></div>
+        <span class="eyebrow">Ogden, Utah</span>
+        <h3>Brad Folsom</h3>
+        <p class="muted small" style="margin-top: -8px;">Tax &amp; Business Advisor · Director, Client Services</p>
+        <p>In Ogden since 1984. Specializes in multi-state and multi-entity tax solutions for closely held businesses, individuals, and high earners.</p>
+        <p class="small muted">B.S. Accounting (magna cum laude), Brigham Young University</p>
+        <a href="#" class="btn btn--accent" style="margin-top: var(--space-3);">Schedule with Brad</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== CTA BAND (ink reverse) ============== -->
+<section class="section section--ink">
+  <div class="container container--narrow tac">
+    <span class="eyebrow">Ready to talk?</span>
+    <h2>A 30-minute strategy session. No pitch.</h2>
+    <p class="lead" style="margin-inline: auto;">We respond to every inquiry within 24 hours. Three Utah offices · serving clients statewide.</p>
+    <div class="cluster" style="justify-content: center; margin-top: var(--space-5);">
+      <a href="#" class="btn btn--reverse">Schedule a Strategy Session</a>
+      <a href="#" class="btn btn--reverse" style="border-color: transparent;">(385) 333-4050</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER STRIP ============== -->
+<footer class="section section--tight" style="border-top: var(--border);">
+  <div class="container">
+    <div class="grid grid--3">
+      <div>
+        <span class="eyebrow">Acuity</span>
+        <p class="small muted">Acuity Business &amp; Tax Advisors, LLC is a full-service accounting firm with offices in Ogden, Utah, South Ogden, Utah, and St. George, Utah serving clients throughout Utah and surrounding areas.</p>
+      </div>
+      <div>
+        <span class="eyebrow">Locations</span>
+        <p class="small">2655 Kiesel Ave, Ogden · (385) 333-4050<br>920 Chambers St #20, South Ogden · (801) 393-7884<br>230 N 1680 E #W, St.&nbsp;George · (385) 333-4050</p>
+      </div>
+      <div>
+        <span class="eyebrow">Resources</span>
+        <p class="small"><a href="#">Insights</a> · <a href="#">Make a Payment</a> · <a href="#">Check My Refund</a> · <a href="#">Client Login</a></p>
+      </div>
+    </div>
+    <hr class="rule">
+    <p class="small muted">© 2026 Acuity Business &amp; Tax Advisors, LLC · STYLE PREVIEW · not for production</p>
+  </div>
+</footer>
+
+</body>
+</html>
